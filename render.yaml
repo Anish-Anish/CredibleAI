@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: fake-news-detector
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port=10000 --server.enableCORS=false
+    plan: free
+    branch: main
+    autoDeploy: true
